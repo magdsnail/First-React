@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+        const str = 'world';
+        const Hello = React.createClass({
+            getInitialState(){
+                return {opacity: 1.0};
+            },
+            componentDidMount() {
+                this.timer = setInterval(function () {
+                    let opacity = this.state.opacity;
+                    opacity -= .05
+                    if (opacity < 0.1) {
+                        opacity = 1.0;
+                    }
+                    this.setState({
+                        opacity
+                    })
+                }.bind(this), 100)
+            },
+            render() {
+                const value = this.state.value;
+                return (
+                    <div style={{opacity: this.state.opacity}}>
+                        hello, {this.props.name}
+                    </div>
+                );
+            }
+       });
+       ReactDOM.render(
+           <Hello name={str}/>,
+           document.getElementById('example')
+       );
+    </script>
+</body>
+</html>

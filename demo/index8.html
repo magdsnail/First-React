@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+       const LinkButton = React.createClass({
+            getInitialState(){
+                return {liked: false};
+            },
+            handleClick() {
+                this.setState({liked: !this.state.liked});
+            },
+            render() {
+                const text = this.state.liked ? 'like' : 'haven\'t liked';
+                return (
+                    <button onClick={this.handleClick}>
+                        You {text} this. Click to toggle.
+                    </button>
+                );
+            }
+       });
+       ReactDOM.render(
+           <LinkButton/>,
+           document.getElementById('example')
+       );
+    </script>
+</body>
+</html>

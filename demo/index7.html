@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React</title>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+</head>
+<body>
+    <div id="example"></div>
+    <script type="text/babel">
+       const data = 123;
+       const MyTitle = React.createClass({
+            propTypes: {
+                title: React.PropTypes.string.isRequired,
+            },
+            render() {
+               const html = <h1>{this.props.title}</h1>;
+               return html;
+            }
+       });
+       ReactDOM.render(
+           <MyTitle title={data}/>,
+           document.getElementById('example')
+       );
+    </script>
+</body>
+</html>
