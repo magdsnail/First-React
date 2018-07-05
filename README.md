@@ -1,1 +1,2 @@
 # First-React
+# Simple understanding
