@@ -4,12 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hello_react</title>
-  <style>
-    .title{
-      background-color: orange;
-      width: 200px;
-    }
-  </style>
 </head>
 <body>
   <div id="test"></div>
@@ -18,17 +12,16 @@
   <script type="text/javascript" src="../js/babel.js"></script>
 
   <script type="text/babel">
-    const myId = 'aTguiGu';
-    const myData = 'hello, reacT'
+    const data = ['angular', 'react', 'vue'];
 
     const VDOM = (
       <div>
-        <h2 className="title" id={myId.toLocaleLowerCase()}>
-          <span style={{color: 'white',fontSize: '20px'}}>
-            {myData.toLocaleLowerCase()}
-          </span>
-        </h2>
-        <input type="text"/>
+        <h1>前端js框架列表</h1>
+        <ul>
+          {
+            data.map((item, index) => <li key={index}>{item}</li>)
+          }
+        </ul>
       </div>
     )
 

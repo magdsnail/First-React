@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hello_react</title>
+</head>
+<body>
+  <div id="test"></div>
+  <script type="text/javascript" src="../js/react.js"></script>
+  <script type="text/javascript" src="../js/react-dom.js"></script>
+  <script type="text/javascript" src="../js/babel.js"></script>
+
+  <script type="text/babel">
+    function Demo() {
+      return <h2>我是用函数定义的组件（使用于【简单组件】的定义）</h2>
+    }
+    ReactDOM.render(<Demo/>, document.getElementById('test'))
+  </script>
+</body>
+</html>
