@@ -27,7 +27,7 @@
 
     const p = {name: "tom", age: "18", sex: "男"};
     // ReactDOM.render(<Persion name={p.name} age={p.age} sex={p.sex}/>, document.getElementById('test'));
-    ReactDOM.render(<Persion name="tom" age="18" sex="男"/>, document.getElementById('test'));
+    ReactDOM.render(<Persion {...p}/>, document.getElementById('test'));
   </script>
 </body>
 </html>
