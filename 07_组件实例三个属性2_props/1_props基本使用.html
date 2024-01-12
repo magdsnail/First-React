@@ -29,14 +29,21 @@
     Persion.protoTypes = {
       name: ProtoTypes.string.isRequired,
       sex: ProtoTypes.string,
+      age: ProtoTypes.number,
+      speak: ProtoTypes.func
     }
     Persion.defaultProps = {
-      
+      sex: '男',
+      age: 18
     }
 
     const p = {name: "tom", age: "18", sex: "男"};
     // ReactDOM.render(<Persion name={p.name} age={p.age} sex={p.sex}/>, document.getElementById('test'));
     ReactDOM.render(<Persion {...p}/>, document.getElementById('test'));
+
+    function speak() {
+      console.log('我说话了');
+    }
   </script>
 </body>
 </html>
