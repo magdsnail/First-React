@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hello_react</title>
 </head>
+
 <body>
   <div id="test"></div>
   <script type="text/javascript" src="../js/react.js"></script>
@@ -13,14 +15,14 @@
   <script type="text/javascript" src="../js/prop-types.js"></script>
 
   <script type="text/babel">
-    class Persion extends React.Component{
+    class Persion extends React.Component {
       render() {
-        const {name, age, sex} = this.props;
+        const { name, age, sex } = this.props;
         return (
           <ul>
-            <li>姓名: {name}</li>  
-            <li>性别: {sex}</li>  
-            <li>年龄: {age}</li>  
+            <li>姓名: {name}</li>
+            <li>性别: {sex}</li>
+            <li>年龄: {age}</li>
           </ul>
         );
       }
@@ -37,13 +39,14 @@
       age: 18
     }
 
-    const p = {name: "tom", age: "18", sex: "男"};
+    const p = { name: "tom", age: "18", sex: "男" };
     // ReactDOM.render(<Persion name={p.name} age={p.age} sex={p.sex}/>, document.getElementById('test'));
-    ReactDOM.render(<Persion {...p}/>, document.getElementById('test'));
+    ReactDOM.render(<Persion {...p} />, document.getElementById('test'));
 
     function speak() {
       console.log('我说话了');
     }
   </script>
 </body>
+
 </html>
