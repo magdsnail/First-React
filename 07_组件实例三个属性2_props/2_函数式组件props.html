@@ -15,28 +15,28 @@
   <script type="text/javascript" src="../js/prop-types.js"></script>
 
   <script type="text/babel">
-    class Persion extends React.Component {
-      static protoTypes = {
-        name: ProtoTypes.string.isRequired,
-        sex: ProtoTypes.string,
-        age: ProtoTypes.number,
-        speak: ProtoTypes.func,
-      };
-      static defaultProps = {
-        sex: "男",
-        age: 18,
-      };
-      render() {
-        const { name, age, sex } = this.props;
-        return (
-          <ul>
-            <li>姓名: {name}</li>
-            <li>性别: {sex}</li>
-            <li>年龄: {age}</li>
-          </ul>
-        );
-      }
-    }
+    // class Persion extends React.Component {
+    //   static protoTypes = {
+    //     name: ProtoTypes.string.isRequired,
+    //     sex: ProtoTypes.string,
+    //     age: ProtoTypes.number,
+    //     speak: ProtoTypes.func,
+    //   };
+    //   static defaultProps = {
+    //     sex: "男",
+    //     age: 18,
+    //   };
+    //   render() {
+    //     const { name, age, sex } = this.props;
+    //     return (
+    //       <ul>
+    //         <li>姓名: {name}</li>
+    //         <li>性别: {sex}</li>
+    //         <li>年龄: {age}</li>
+    //       </ul>
+    //     );
+    //   }
+    // }
 
      function Persion() {
       return (
