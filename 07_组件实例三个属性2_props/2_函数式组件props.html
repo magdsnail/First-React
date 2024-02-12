@@ -52,7 +52,6 @@
     const p = { name: "tom", age: "18", sex: "男" };
     // ReactDOM.render(<Persion name={p.name} age={p.age} sex={p.sex}/>, document.getElementById('test'));
     ReactDOM.render(<Persion {...p} />, document.getElementById("test"));
-
     function speak() {
       console.log("我说话了");
     }
